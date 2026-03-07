@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle.tsx";
 import { AuroraBackground } from "@/components/aurora-background.tsx";
-import { CarouselSpacing } from "./components/carousel-spacing";
+
 //import { Button } from "@/components/ui/button";
 import { SearchBox } from "./components/search";
 import { useEffect, useState } from "react";
