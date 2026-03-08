@@ -21,11 +21,15 @@ const MovieCard = ({ movie }: { movie: Movie }) => {
         <img src={star} className="h-4"></img> <p>{vote_average.toFixed(1)}</p>
       </div>
       <CardContent className=" hover:scale-103 transition-transform duration-600 ">
+        {poster_path?
         <img
           src={`https://image.tmdb.org/t/p/w600_and_h900_face${poster_path}`}
           alt={title}
           className="aspect-2/3 rounded-t-xl object-cover"
         />
+        :<div className="text-3xl font-serif text-foreground aspect-2/3 rounded-t-xl bg-gradient-to-br from-accent/50 to-sidebar flex flex-col items-center justify-center p-4">
+          {title}<br/>({release_date.slice(0,4)})
+        </div>}
       </CardContent>
       <CardFooter className="hover:bg-accent/20">
         <CardTitle>{title}</CardTitle>
