@@ -74,7 +74,7 @@ export function App() {
         <main className="bg-linear-to-b from-10% via-muted via-50% to-accent/40">
           <section className="px-6 mx-auto pb-10 max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-350 md:px-10">
             <h3 className="text-5xl py-10">Top Movies</h3>
-            <ul className="grid grid-cols-2 gap-y-5 gap-x-3  md:gap-x-5 justify-center md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            <ul className="grid grid-cols-2 gap-y-5 gap-x-3  md:gap-x-5 justify-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
               {movieList.map((movie) => (
                 <div key={movie.id} className="">
                   <MovieCard movie={movie} />
