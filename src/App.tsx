@@ -10,9 +10,7 @@ import MovieCard from "./components/movie-card";
 import { useDebounce } from "react-use";
 import {
   client,
-  getTopMovies,
   updateSearchcount,
-  type TopMovieRow,
 } from "./lib/appwrite";
 
 const API_BASE_URL = "https://api.themoviedb.org/3/discover/movie";
@@ -35,7 +33,6 @@ export function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [movieList, setmovieList] = useState<Movie[]>([]);
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("");
-  const [topMovies, setTopMovies] = useState<TopMovieRow[]>([]);
 
   // Ping Appwrite backend on app initialization
   useEffect(() => {
